@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/main.d96059c3.css">
+    <script defer="" src="/controller.e87f5190.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Manager</title>
+<script src="/main.d96059c3.js"></script></head>
+
+<body>
+    <div class="body_container container">
+      <!-- income container -->
+        <div class="left_container">
+            <div style="display: flex;flex-direction: column;width: 45%;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="red" style="font-weight: bolder;padding: 0.5rem;font-size: 1.1rem;">Expense</div>
+                    <div>
+                        Sort by
+                        <select name="sortby" id="expense_filter" class="expense_filter">
+                            <option value="none">Date</option>
+                            <option value="Amount+">Decreasing Amount</option>
+                            <option value="Amount-">Increasing Amount</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- expense container -->
+                <div class="expenses_container card" style="overflow:auto">
+
+                </div>
+
+            </div>
+
+            <div style="display: flex;flex-direction: column;width: 45%;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="green" style="font-weight: bolder;padding: 0.5rem;font-size: 1.1rem;">
+                        Income
+                    </div>
+                    <!-- opitons of income and expense -->
+                    <div>
+                        Sort by
+                        <select name="sortby" id="income_filter" class="income_filter">
+                            <option value="none">Date</option>
+                            <option value="Amount+">Decreasing Amount</option>
+                            <option value="Amount-">Increasing Amount</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="income_container card" style="overflow:auto;">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="add_transaction_container card">
+            <div class="balance_container">
+
+            </div>
+            <hr style="height:1px;border-width:0;color:rgb(170, 170, 170);background-color:rgb(175, 175, 175)">
+            <div style="display: flex;justify-content: center;margin-top: auto;">
+                <h3>Add Transaction</h3>
+            </div>
+            <form class="add_transaction_form">
+                <div class="form_item">
+                    <label for="tt">Type</label>
+                    <select id="tt" name="transaction_type" class="transaction_type">
+                        <option value="INCOME">Income</option>
+                        <option value="EXPENSE">Expense</option>
+                    </select>
+                </div>
+                <div class="form_item">
+                    <label for="value" style="width: 30%;">Amount</label>
+                    <input placeholder="Enter Amount" type="text" style="width: 60%;" id="value" class="amount">
+                </div>
+                <div style="display: flex;justify-content: center;margin-top: 1rem;">
+                    <button type="submit">Add Transaction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
